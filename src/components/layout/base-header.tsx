@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Group, HeartHandshakeIcon, } from "lucide-react"
+import { Group, HeartHandshakeIcon, RefreshCcw, } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -10,6 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import ThemeButton from "../theme-button"
 
 function BaseHeader() {
     return (
@@ -25,9 +26,17 @@ function BaseHeader() {
             </nav>
             <div className="flex w-full items-center gap-4 md:gap-2 lg:gap-4">
                 <div className="w-full"></div>
+                <Button variant="secondary" className="rounded-3xl shrink-0">
+                    <Link href={"/"} className="flex flex-row items-center justify-center gap-2">
+                        <RefreshCcw className="size-4" />
+                        <span className="text-sm">Refresh</span>
+                        <span className="sr-only">Refresh</span>
+                    </Link>
+                </Button>
+                <ThemeButton />
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="secondary" size="icon" className="rounded-full">
+                        <Button variant="secondary" size="icon" className="rounded-full shrink-0">
                             <HeartHandshakeIcon className="h-5 w-5" />
                             <span className="sr-only">Toggle options menu</span>
                         </Button>
