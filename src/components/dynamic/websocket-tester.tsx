@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 
 function WebSocketTester() {
@@ -113,6 +113,7 @@ function WebSocketTester() {
             <Card>
                 <CardHeader>
                     <CardTitle>Send Message</CardTitle>
+                    <CardDescription className='text-yellow-600'>{connected ? "Start testing your socket signals :)" : "Once connected you'll allowed to send message signals"}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
                     <Input
@@ -130,7 +131,11 @@ function WebSocketTester() {
 
             <Card>
                 <CardHeader>
-                    <CardTitle>Messages</CardTitle>
+                    <CardTitle className='flex flex-row justify-between'>
+                        <span>Message Logs</span>
+                        <Button size={"sm"} className='rounded-3xl ml-auto' onClick={() => setMessages([])}>Clear Logs</Button>
+                    </CardTitle>
+                    <CardDescription className='text-yellow-600'>Do remember these logs will be lost as soon as you close the page .!!!</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <Textarea
