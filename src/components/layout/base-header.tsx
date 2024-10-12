@@ -45,7 +45,7 @@ function BaseHeader() {
                         <DropdownMenuLabel>Made with ❤️ by Ankur Jaiswal</DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem asChild>
-                            <Link href={"gihtub.com/ankurjaiswalofficial/live-websocket-tester"}>Github</Link>
+                            <Link href={"https://github.com/ankurjaiswalofficial/live-websocket-tester"}>Github</Link>
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem disabled>Feedback</DropdownMenuItem>
