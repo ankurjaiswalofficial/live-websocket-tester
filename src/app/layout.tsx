@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import {Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/provider/theme-provider";
 
-const inter = Inter({subsets: ["latin",]})
+const inter = Inter({ subsets: ["latin",] })
 
 export const metadata: Metadata = {
   title: "Live Websocket Tester",
@@ -19,7 +20,9 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
