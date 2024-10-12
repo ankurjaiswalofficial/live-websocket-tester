@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Live WebSocket Tester
+=====================
 
-## Getting Started
+A simple and interactive WebSocket testing tool that allows you to connect to WebSocket servers in real time, send messages, and receive responses. This tool is useful for developers and testers to validate WebSocket connections and test communication with various servers.
 
-First, run the development server:
+Features
+--------
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*   **Connect to WebSocket Servers:** Input a WebSocket URL and connect instantly.
+*   **Send Custom Messages:** Send any text message and view the real-time response.
+*   **Live Message Logs:** See incoming and outgoing messages with timestamps.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Getting Started
+---------------
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*   Node.js (v14 or later recommended)
+*   npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1.  Clone the repository:
+    
+    ```bash
+    git clone https://github.com/ankurjaiswalofficial/live-websocket-tester.git
+    ```
+    
+2.  Navigate to the project directory:
+    
+    ```bash
+    cd live-websocket-tester
+    ```
+    
+3.  Install the dependencies:
+    
+    ```bash
+    npm install
+    ```
+    
+    Or if you're using yarn:
+    
+    ```bash
+    yarn install
+    ```
+    
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Running the App
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To start the application locally, run:
 
-## Deploy on Vercel
+    ```bash
+    npm run start
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Or with yarn:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    yarn start
+    ```
+
+The application will be available at `[http://localhost:3000](http://localhost:3000)`.
+
+Usage
+-----
+
+1.  **Connect to a WebSocket Server:**
+    
+    *   Enter the WebSocket URL (e.g., `[wss://echo.websocket.org](wss://echo.websocket.org)`).
+    *   Click the **Connect** button.
+2.  **Send Messages:**
+    
+    *   Type your message in the input box.
+    *   Press **Send** or hit the Enter key.
+3.  **View Logs:**
+    
+    *   See the connection status, sent messages, and received responses in real time.
+4.  **Disconnect:**
+    
+    *   Click the **Disconnect** button to close the connection.
+
+Built With
+----------
+
+*   [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+*   [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket) - Provides a way to establish a connection to a WebSocket server.
+
+Contributing
+------------
+
+Feel free to submit issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+License
+-------
+
+This project is licensed under the MIT License - see the LICENSE file for details.
