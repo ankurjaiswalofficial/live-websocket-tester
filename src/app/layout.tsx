@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/provider/theme-provider";
 import BaseLayout from "@/components/layout/base";
 import { Toaster } from "@/components/ui/toaster";
+import Analytics from "@/components/analytics";
 
 const inter = Inter({ subsets: ["latin",] })
 
@@ -22,12 +23,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <BaseLayout>
-            {children}
-          </BaseLayout>
-          <Toaster />
-        </ThemeProvider>
+        <Analytics measurementId={process.env.GOOGLE_MEASUREMENT_ID!} />
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+            <BaseLayout>
+              {children}
+            </BaseLayout>
+            <Toaster />
+          </ThemeProvider>
       </body>
     </html>
   );
